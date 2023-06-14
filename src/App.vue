@@ -1,30 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<div> 
+  <input type="text" name="" id="" v-model="note" />
+  <button v-on:click="sendToServe">Enviar notas</button>
+</div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts" setup>
+import { ref  } from "vue";
 
-nav {
-  padding: 30px;
-}
+let note = ref('')
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+const sendToServe = () => {
+  alert("funciona")
 }
+   
+</script>
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style scoped>
+
 </style>
